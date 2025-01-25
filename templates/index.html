@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>CRUD App</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/create">Create</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Welcome to the CRUD App</h2>
+        <p>This is a simple CRUD application built with Go and SQLite.</p>
+        <p>CRUD stands for Create, Read, Update, and Delete. It represents the basic operations you can perform on a
+            database or application.</p>
+        <p>We have containerized the application using Docker and docker-compose. For installation on Kubernetes, we use
+            Helm to manage the application's lifecycle.</p>
+        <p>We have implemented endpoints for probes in the Go application and created an exporter to collect metrics
+            from our application.</p>
+        <button onclick="location.href='/create'">Create New Item</button>
+
+        <h2>Items List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .}}
+                <tr>
+                    <td>{{.Name}}</td>
+                    <td>${{.Price}}</td>
+                    <td>
+                        <a class="button" href="/edit/{{.ID}}">Edit</a>
+                        <a class="button" href="/delete/{{.ID}}">Delete</a>
+                    </td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>CRUD App &copy; 2023</p>
+        <p>For more information, visit our <a href="https://github.com/Tech-Preta/go-crud-app">GitHub repository</a>.
+        </p>
+    </footer>
+</body>
+
+</html>

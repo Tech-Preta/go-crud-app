@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Item</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>CRUD App</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/create">Create</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Create New Item</h2>
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            <label>Price:</label>
+            <input type="number" step="0.01" name="price" required>
+            <button type="submit">Create</button>
+        </form>
+        <a href="/">Back to List</a>
+    </div>
+
+    <footer>
+        <p>CRUD App &copy; 2023</p>
+        <p>For more information, visit our <a href="https://github.com/Tech-Preta/go-crud-app">GitHub repository</a>.
+        </p>
+    </footer>
+</body>
+
+</html>

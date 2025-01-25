@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Item</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>CRUD App</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/create">Create</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Delete Item</h2>
+        <p>Are you sure you want to delete <strong>{{.Name}}</strong>?</p>
+        <form method="POST">
+            <button type="submit">Delete</button>
+        </form>
+        <a href="/">Cancel</a>
+    </div>
+
+    <footer>
+        <p>CRUD App &copy; 2023</p>
+        <p>For more information, visit our <a href="https://github.com/Tech-Preta/go-crud-app">GitHub repository</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
