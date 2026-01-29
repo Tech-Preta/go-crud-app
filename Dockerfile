@@ -13,7 +13,7 @@ COPY . .
 RUN go build -o main .
 
 # Etapa 2: Runtime
-FROM alpine:3.23.2
+FROM alpine:3.23.3
 
 WORKDIR /app
 
